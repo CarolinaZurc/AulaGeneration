@@ -1,1 +1,0 @@
-SELECT * FROM db_estoque.tb_produtos where preço < 500

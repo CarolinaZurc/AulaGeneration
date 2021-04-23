@@ -1,1 +1,0 @@
-SELECT * FROM db_funcionaries.db_func where salario > 2000

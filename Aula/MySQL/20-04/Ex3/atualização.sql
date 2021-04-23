@@ -1,1 +1,0 @@
-update tb_alunes set notas = "7" where id = 3;

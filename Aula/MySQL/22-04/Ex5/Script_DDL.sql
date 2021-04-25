@@ -65,6 +65,7 @@ SELECT * FROM db_construindo_a_nossa_vida.tb_produto where preco > 50;
 SELECT * FROM db_construindo_a_nossa_vida.tb_produto where preco between 3 and 60;
 SELECT * FROM db_construindo_a_nossa_vida.tb_produto where nome like "C%";
 SELECT * FROM tb_produto inner join tb_categoria on tb_categoria.id_cat = tb_produto.fk_cat;
+SELECT * FROM tb_produto inner join tb_categoria on tb_categoria.id_cat = tb_produto.fk_cat where tb_categoria.acabamento;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

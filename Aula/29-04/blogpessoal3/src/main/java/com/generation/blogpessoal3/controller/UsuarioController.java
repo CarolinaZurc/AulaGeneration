@@ -2,6 +2,8 @@ package com.generation.blogpessoal3.controller;
 
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,8 +17,8 @@ import com.generation.blogpessoal3.model.UserLogin;
 import com.generation.blogpessoal3.model.Usuario;
 import com.generation.blogpessoal3.service.UsuarioService;
 
-@RequestMapping
-@RestController("/usuarios")
+@RestController
+@RequestMapping("/usuarios")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 	
@@ -30,7 +32,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/cadastrar")
-	public ResponseEntity<Usuario> Post (@RequestBody Usuario usuario){
+	public ResponseEntity<Usuario> Post (@Valid @RequestBody Usuario usuario){
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(usuarioService.CadastrarUsuario(usuario));
 	}
